@@ -9,7 +9,7 @@ const navigator = createStackNavigator(
   {
     initialRouteName: "Home",
     defaultNavigationOptions: {
-      title: "FishingBuddy"
+      title: "FishingBuddyShippuden"
     }
   }
 );
