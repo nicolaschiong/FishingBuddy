@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "plant-app",
-    "slug": "plant-app",
+    "name": "fishing-buddy",
+    "slug": "fishing-buddy",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [

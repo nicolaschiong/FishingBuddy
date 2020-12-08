@@ -228,7 +228,7 @@ class Welcome extends Component {
             Fishing.
             <Text h1 primary>
               {" "}
-              Revolutionized.
+              Made Better.
             </Text>
           </Text>
           <Text h3 gray2 style={{ marginTop: theme.sizes.padding / 2 }}>
