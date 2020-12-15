@@ -1,45 +1,45 @@
 const categories = [
   {
-    id: "plants",
-    name: "Plants",
-    tags: ["products", "inspirations"],
+    id: "rod",
+    name: "Rod",
+    tags: ["products", "recommend", "shop"],
     count: 147,
-    image: require("../assets/icons/plants.png")
+    image: require("../assets/icons/rod.png")
   },
   {
-    id: "seeds",
-    name: "Seeds",
+    id: "net",
+    name: "Net",
     tags: ["products", "shop"],
     count: 16,
-    image: require("../assets/icons/seeds.png")
+    image: require("../assets/icons/net.png")
   },
   {
-    id: "flowers",
-    name: "Flowers",
-    tags: ["products", "inspirations"],
+    id: "reel",
+    name: "Reel",
+    tags: ["products", "recommend"],
     count: 68,
-    image: require("../assets/icons/flowers.png")
+    image: require("../assets/icons/reel.png")
   },
   {
-    id: "sprayers",
-    name: "Sprayers",
+    id: "lure",
+    name: "Lure",
     tags: ["products", "shop"],
     count: 17,
-    image: require("../assets/icons/sprayers.png")
+    image: require("../assets/icons/lure.png")
   },
   {
-    id: "pots",
-    name: "Pots",
+    id: "bait",
+    name: "Bait",
     tags: ["products", "shop"],
     count: 47,
-    image: require("../assets/icons/pots.png")
+    image: require("../assets/icons/bait.png")
   },
   {
-    id: "fertilizers",
-    name: "fertilizers",
+    id: "thread",
+    name: "Thread",
     tags: ["products", "shop"],
     count: 47,
-    image: require("../assets/icons/fertilizers.png")
+    image: require("../assets/icons/thread.png")
   }
 ];
 
@@ -76,9 +76,9 @@ const explore = [
 ];
 
 const profile = {
-  username: "react-ui-kit",
-  location: "Europe",
-  email: "contact@react-ui-kit.com",
+  username: "fishing-buddy",
+  location: "Philippines",
+  email: "contact@fishingbuddy.app",
   avatar: require("../assets/images/avatar.png"),
   budget: 1000,
   monthly_cap: 5000,
@@ -86,4 +86,35 @@ const profile = {
   newsletter: false
 };
 
-export { categories, explore, products, profile };
+const campings = [
+  {
+    id: 1,
+    type: 'rv',
+    name: 'Camping Paradise',
+    description: 'Popular spot for trekkers.',
+    rating: 4.9,
+    distance: 2.9,
+    price: 'Free',
+    image: 'https://images.unsplash.com/photo-1525811902-f2342640856e?fit=crop&w=900&h=600&q=130',
+    latlng: {
+      latitude: 37.79335,
+      longitude: -122.4424,
+    }
+  },
+  {
+    id: 2,
+    type: 'tent',
+    name: 'Lake Florida',
+    description: 'This is for all sunset lovers.',
+    rating: 4.9,
+    distance: 2.9,
+    price: 'Free',
+    image: 'https://images.unsplash.com/photo-1506535995048-638aa1b62b77?fit=crop&w=900&h=600&q=130',
+    latlng: {
+      latitude: 37.78865,
+      longitude: -122.4324,
+    }
+  },
+];
+
+export { categories, explore, products, profile, campings };

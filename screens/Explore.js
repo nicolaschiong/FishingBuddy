@@ -119,7 +119,7 @@ class Explore extends Component {
       <Block>
         <Block flex={false} row center space="between" style={styles.header}>
           <Text h1 bold>
-            Explore
+            Marketplace
           </Text>
           {this.renderSearch()}
         </Block>

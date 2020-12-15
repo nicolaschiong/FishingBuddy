@@ -51,13 +51,13 @@ class Browse extends Component {
   render() {
     const { profile, navigation } = this.props;
     const { categories } = this.state;
-    const tabs = ["Products", "Inspirations", "Shop"];
+    const tabs = ["Products", "Recommend", "Shop"];
 
     return (
       <Block>
         <Block flex={false} row center space="between" style={styles.header}>
           <Text h1 bold>
-            Explore edit
+            Browse
           </Text>
           <Button onPress={() => navigation.navigate("Settings")}>
             <Image source={profile.avatar} style={styles.avatar} />
@@ -82,7 +82,7 @@ class Browse extends Component {
                   <Badge
                     margin={[0, 0, 15]}
                     size={50}
-                    color="rgba(41,216,143,0.20)"
+                    color={theme.colors.pastel}
                   >
                     <Image source={category.image} />
                   </Badge>
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     paddingBottom: theme.sizes.base
   },
   active: {
-    borderBottomColor: theme.colors.secondary,
+    borderBottomColor: theme.colors.tertiary,
     borderBottomWidth: 3
   },
   categories: {
