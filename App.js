@@ -1,5 +1,7 @@
 import React from "react";
 import { StyleSheet } from "react-native";
+//import { Provider } from 'react-redux';
+//import store from "./modules";
 
 import { AppLoading } from "expo";
 import { Asset } from "expo-asset";
@@ -68,6 +70,12 @@ export default class App extends React.Component {
       <Block white>
         <Navigation />
       </Block>
+    //   <Provider store={store}>
+    //   <View style={styles.container}>
+    //     {Platform.OS === "ios" && <StatusBar barStyle="default" />}
+    //     <AppNavigator />
+    //   </View>
+    // </Provider>
     );
   }
 }

@@ -6,11 +6,12 @@ import {
   ScrollView,
   TouchableOpacity
 } from "react-native";
-
+import { LinearGradient } from "expo-linear-gradient";
 import { Card, Badge, Button, Block, Text } from "../components";
 import { theme, mocks } from "../constants";
 
-const { width } = Dimensions.get("window");
+const { width, height } = Dimensions.get("window");
+
 
 class Browse extends Component {
   state = {
@@ -45,6 +46,26 @@ class Browse extends Component {
           {tab}
         </Text>
       </TouchableOpacity>
+    );
+  }
+
+  renderFooter() {
+    const { navigation } = this.props;
+    return (
+      <LinearGradient
+        locations={[0.5, 1]}
+        style={styles.footer}
+        colors={["rgba(255,255,255,0)", "rgba(255,255,255,0.6)"]}
+      >
+        <Button 
+          gradient style={{ width: width / 2.678 }}
+          onPress={() => navigation.navigate("Trip")}
+          >
+          <Text bold white center>
+            Plan a Fishing Trip
+          </Text>
+        </Button>
+      </LinearGradient>
     );
   }
 
@@ -97,6 +118,7 @@ class Browse extends Component {
             ))}
           </Block>
         </ScrollView>
+        {this.renderFooter()}
       </Block>
     );
   }
@@ -141,5 +163,17 @@ const styles = StyleSheet.create({
     minWidth: (width - theme.sizes.padding * 2.4 - theme.sizes.base) / 2,
     maxWidth: (width - theme.sizes.padding * 2.4 - theme.sizes.base) / 2,
     maxHeight: (width - theme.sizes.padding * 2.4 - theme.sizes.base) / 2
+  },
+  footer: {
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+    left: 0,
+    overflow: "visible",
+    alignItems: "center",
+    justifyContent: "center",
+    height: height * 0.1,
+    width,
+    paddingBottom: theme.sizes.base * 4
   }
 });

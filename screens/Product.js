@@ -15,10 +15,10 @@ import { theme, mocks } from "../constants";
 const { width, height } = Dimensions.get("window");
 
 class Product extends Component {
-  static navigationOptions = ({ navigation }) => {
+  static navigationOptions = ({ navigation = this.props }) => {
     return {
       headerRight: (
-        <Button onPress={() => {}}>
+        <Button onPress={() => {navigation.navigate("Login")}}>
           <Icon.Entypo name="dots-three-horizontal" color={theme.colors.gray} />
         </Button>
       )
