@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import {
+  View,
   Dimensions,
   Image,
   StyleSheet,
   ScrollView,
   TouchableOpacity
 } from "react-native";
+import { AntDesign } from '@expo/vector-icons'; 
 import { LinearGradient } from "expo-linear-gradient";
 import { Card, Badge, Button, Block, Text } from "../components";
 import { theme, mocks } from "../constants";
@@ -83,6 +85,13 @@ class Browse extends Component {
           <Button onPress={() => navigation.navigate("Settings")}>
             <Image source={profile.avatar} style={styles.avatar} />
           </Button>
+          <View style={styles.settings}>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate("Join")}
+            >
+              <AntDesign name="message1" size={24} color="black" />
+            </TouchableOpacity>
+          </View>
         </Block>
 
         <Block flex={false} row style={styles.tabs}>

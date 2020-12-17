@@ -12,6 +12,9 @@ import Browse from "../screens/Browse";
 import Product from "../screens/Product";
 import Settings from "../screens/Settings";
 import Trip from "../screens/Trip";
+import Join from "../screens/Join";
+import FriendList from "../screens/FriendList";
+import Chat from "../screens/Chat";
 
 import { theme } from "../constants";
 
@@ -25,7 +28,10 @@ const screens = createStackNavigator(
     Browse,
     Product,
     Settings,
-    Trip
+    Trip,
+    Join,
+    Chat,
+    FriendList
   },
   {
     defaultNavigationOptions: {
