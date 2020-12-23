@@ -1,21 +1,22 @@
 import React from 'react'
-import {View, Text,Image } from 'react-native'
+import {View, Text, Image } from 'react-native'
 import SwiperComponent from '../components/SwiperComponent'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+
+import { theme } from "../constants";
 
 const Detail = ({navigation}) => {
     return(
         <View style={{
             flex:1,
-            backgroundColor:"#FFF",
-            
+            backgroundColor:theme.colors.white,
         }}>
             <View style={{
                 flexDirection:"row",
                 width:"100%",
                 height:"90%"
             }}>
-                <View style={{width:"10%",paddingLeft:20}}>
+                <View style={{ width:"10%", paddingLeft:20 }}>
                     <TouchableOpacity onPress={()=>navigation.goBack()}>
                         <Image
                             source={require('../images/17.png')}
@@ -79,8 +80,10 @@ const Detail = ({navigation}) => {
                             />
                         </View>  
                 </View>
-                <View style={{width:"90%"}}>
-                        <SwiperComponent/>
+                <View style={{
+                    width:"80%",
+                    }}>
+                    <SwiperComponent/>
                 </View>
             </View>
 
@@ -95,7 +98,7 @@ const Detail = ({navigation}) => {
                                 fontSize:28,
                                 color:"#62636a"
                             }}>
-                                Angelica
+                                Shimano X-500
                             </Text>
                             <Text style={{
                                 fontWeight:"bold",
@@ -110,11 +113,11 @@ const Detail = ({navigation}) => {
                         <Text style={{
                             paddingHorizontal:20,
                             fontWeight:"bold",
-                            color:"#b1e5d3",
+                            color:theme.colors.primary,
                             paddingTop:3,
                             fontSize:20
                         }}>
-                            Russia
+                            REEL
                         </Text>
 
                         <View style={{
@@ -123,15 +126,15 @@ const Detail = ({navigation}) => {
                         }}>
                             <View style={{
                                 width:"50%",
-                                backgroundColor:"#00a46c",
-                                height:70,
+                                backgroundColor:theme.colors.primary,
+                                height:100,
                                 marginTop:20,
-                                borderTopRightRadius:25,
+                                borderTopRightRadius:40,
                                 alignItems:"center",
                                 justifyContent:"center"
                             }}>
                                 <Text style={{
-                                    color:"#FFF",
+                                    color:theme.colors.white,
                                     fontSize:17
                                 }}>Buy Now</Text>
                             </View>

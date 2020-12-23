@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Image, ImageBackground } from 'react-native';
+import { View, Text, Image, ImageBackground, Platform } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
 import { theme } from "../constants";
@@ -9,7 +9,7 @@ const Header = ({navigation, header}) => {
     return (
         <View style={{
             backgroundColor: theme.colors.primary,
-            height:"23%",
+            height: Platform.OS==='ios' ? '23%' : '29%',
             borderBottomLeftRadius:20,
             borderBottomRightRadius:20,
             paddingHorizontal:20
