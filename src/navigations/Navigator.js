@@ -36,7 +36,7 @@ const BottomTabNavigator = () => {
                     tabBarIcon:({ focused, size}) => {{
                         let color;
                         focused===true?color=theme.colors.secondary:color=theme.colors.white;
-                            return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'human-greeting'} size={size} color={theme.colors.white} />;
+                            return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'human-greeting'} size={size} color={color} />;
                         }
                     }
                 }}

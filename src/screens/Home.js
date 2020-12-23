@@ -74,8 +74,8 @@ const Home = ({navigation}) => {
                             card={{
                                 productName:"Test",
                                 productPrice:"100",
-                                productImage:"4.png",
-                                productCategory:"REEL"
+                                productImage:"5.png",
+                                productCategory:"LURE"
                             }}
                         />
                         <CardSmall 
@@ -92,7 +92,7 @@ const Home = ({navigation}) => {
                             card={{
                                 productName:"Test",
                                 productPrice:"100",
-                                productImage:"4.png",
+                                productImage:"6.png",
                                 productCategory:"REEL"
                             }}
                         />
@@ -101,7 +101,7 @@ const Home = ({navigation}) => {
                             card={{
                                 productName:"Test",
                                 productPrice:"100",
-                                productImage:"4.png",
+                                productImage:"7.png",
                                 productCategory:"REEL"
                             }}
                         />

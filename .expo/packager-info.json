@@ -2,9 +2,9 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 12959,
-  "expoServerNgrokUrl": "https://ef-zse.anonymous.fishingbuddy.exp.direct",
-  "packagerNgrokUrl": "https://packager.ef-zse.anonymous.fishingbuddy.exp.direct",
-  "ngrokPid": 13002,
+  "packagerPid": 17067,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null
 }
