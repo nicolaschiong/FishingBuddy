@@ -9,7 +9,7 @@ const Header = ({navigation, header}) => {
     return (
         <View style={{
             backgroundColor: theme.colors.primary,
-            height:"22%",
+            height:"23%",
             borderBottomLeftRadius:20,
             borderBottomRightRadius:20,
             paddingHorizontal:20
@@ -33,7 +33,7 @@ const Header = ({navigation, header}) => {
                         fontSize:28,
                         color: theme.colors.white,
                         fontWeight:"bold"
-                    }}>Hi Nick</Text>
+                    }}>Hi, Nick!</Text>
                 </View>
                 <View style={{width:"50%",alignItems:"flex-end"}}>
                     <Image

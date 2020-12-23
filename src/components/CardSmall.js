@@ -42,7 +42,7 @@ const CardSmall = ({navigation, card}) => {
                         position:'absolute',
                         right:0
                         
-                    }}>${card.productPrice}
+                    }}>₱{card.productPrice}
                     </Text>
 
                     

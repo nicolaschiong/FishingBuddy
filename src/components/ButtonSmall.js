@@ -8,7 +8,7 @@ import { theme } from "../constants";
 const ButtonSmall = ({navigation, button}) => {
     return (
         <TouchableOpacity 
-            onPress={()=>navigation.navigate("Detail")}
+            onPress={()=>navigation.navigate(button.buttonNav)}
         >
             <View style={{
                 backgroundColor:theme.colors.primary,
@@ -20,7 +20,7 @@ const ButtonSmall = ({navigation, button}) => {
                     fontWeight:"bold",
                     fontSize:13,
                     color: theme.colors.white
-                }}>More</Text>
+                }}>{button.buttonName}</Text>
             </View>
         </TouchableOpacity>
     )

@@ -6,7 +6,7 @@ import Home from '../screens/Home'
 import Detail from '../screens/Detail'
 import Favourite from '../screens/Favourite'
 import Profile from '../screens/Profile'
-import Equipment from '../screens/Equipment'
+import Trip from '../screens/Trip'
 import Marketplace from '../screens/Marketplace'
 import Challenge from '../screens/Challenge'
 import {Image} from 'react-native'
@@ -35,7 +35,7 @@ const BottomTabNavigator = () => {
                     tabBarLabel:"",
                     tabBarIcon:({ focused, size}) => {{
                         let color;
-                        focused===true?color=theme.colors.accent:color=theme.colors.white;
+                        focused===true?color=theme.colors.secondary:color=theme.colors.white;
                             return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'human-greeting'} size={size} color={theme.colors.white} />;
                         }
                     }
@@ -48,7 +48,7 @@ const BottomTabNavigator = () => {
                     tabBarLabel:"",
                     tabBarIcon:({ focused, size}) => {{
                         let color;
-                        focused===true?color=theme.colors.accent:color=theme.colors.white;
+                        focused===true?color=theme.colors.secondary:color=theme.colors.white;
                             return <Icon.MaterialCommunityIcons style={{ height:24, width:29 }} name={'hook'} size={size} color={color} />;
                         }
                     }
@@ -61,7 +61,7 @@ const BottomTabNavigator = () => {
                     tabBarLabel:"",
                     tabBarIcon:({ focused, size}) => {{
                         let color;
-                        focused===true?color=theme.colors.accent:color=theme.colors.white;
+                        focused===true?color=theme.colors.secondary:color=theme.colors.white;
                             return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'home'} size={size} color={color} />;
                         }
                     }
@@ -74,20 +74,20 @@ const BottomTabNavigator = () => {
                     tabBarLabel:"",
                     tabBarIcon:({ focused, color, size}) => {{
                         let color;
-                        focused===true?color=theme.colors.accent:color=theme.colors.white;
+                        focused===true?color=theme.colors.secondary:color=theme.colors.white;
                             return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'star-face'} size={size} color={color} />;
                         }
                     }
                 }}
             />
             <Tab.Screen
-                name="Equipment"
-                component={Equipment}
+                name="Trip"
+                component={Trip}
                 options={{
                     tabBarLabel:"",
                     tabBarIcon:({ focused, size}) => {{
                         let color;
-                        focused===true?color=theme.colors.accent:color=theme.colors.white;
+                        focused===true?color=theme.colors.secondary:color=theme.colors.white;
                             return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'weather-sunset'} size={size} color={color} />;
                         }
                     }

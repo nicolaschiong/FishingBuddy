@@ -17,26 +17,26 @@ const Search = ({navigation, search}) => {
                 marginTop:-45
             }}
            >
-               <View style={{
-                   backgroundColor: theme.colors.white,
-                   paddingVertical:8,
-                   paddingHorizontal:20,
-                   marginHorizontal:20,
-                   borderRadius:15,
-                   marginTop:25,
-                   flexDirection:"row",
-                   alignItems:"center",
-               }}>
-                   <TextInput
-                        placeholder="Search"
-                        placeholderTextColor={theme.colors.primary}
-                        style={{
-                            fontWeight:"bold",
-                            fontSize:18,
-                            width:260
-                        }}
-                   />
-                   <Image
+            <View style={{
+                backgroundColor: theme.colors.white,
+                paddingVertical:8,
+                paddingHorizontal:20,
+                marginHorizontal:20,
+                borderRadius:15,
+                marginTop:25,
+                flexDirection:"row",
+                alignItems:"center",
+            }}>
+                <TextInput
+                    placeholder="Search"
+                    placeholderTextColor={theme.colors.primary}
+                    style={{
+                        fontWeight:"bold",
+                        fontSize:18,
+                        width:300
+                    }}
+                />
+                <Image
                     source={require('../images/search.png')}
                     style={{
                         height:20,
@@ -46,9 +46,9 @@ const Search = ({navigation, search}) => {
                         marginRight:15
                     }
                 }
-                   />
-               </View>
-            </LinearGradient>
+                />
+            </View>
+        </LinearGradient>
     )
 }
 export default Search;

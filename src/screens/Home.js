@@ -9,6 +9,7 @@ import CardSmall from '../components/CardSmall';
 import ButtonSmall from '../components/ButtonSmall';
 import Header from '../components/Header';
 import Search from '../components/Search';
+import HeadingSection from '../components/HeadingSection';
 
 const Home = ({navigation}) => {
     return(
@@ -22,6 +23,7 @@ const Home = ({navigation}) => {
             <ScrollView 
                 style={{paddingTop:-20}}
             >
+                
             <View style={{
                 flexDirection:"row",
                 paddingHorizontal:20,
@@ -29,27 +31,20 @@ const Home = ({navigation}) => {
                 alignItems:"center",
                 
             }}>
-                <View style={{width:"50%"}}>
-                    <Text style={{
-                            fontWeight:"bold",
-                            fontSize:17,
-                            color:"#585a61",
-                            paddingBottom:5
-                        }}>Recommended</Text>
-                        <View style={{
-                            height:4,
-                            backgroundColor:theme.colors.tertiary,
-                            width:115,
-                            marginTop:-5
-                        }}>
-
-                        </View>
-
-                   </View>
-                   <View style={{width:"50%", alignItems:"flex-end"}}>
-                        <ButtonSmall navigation={navigation}/>
-                   </View>
-               </View>
+                
+                <HeadingSection 
+                    heading={{
+                        headingTitle:'Recommended'
+                    }}/>
+                <View style={{width:"50%", alignItems:"flex-end"}}>
+                    <ButtonSmall navigation={navigation}
+                        button={{ 
+                            buttonName:'Discover',
+                            buttonNav:'Detail'
+                            }}
+                    />
+                </View>
+            </View>
 
                 <View>
                     <LinearGradient
@@ -68,8 +63,6 @@ const Home = ({navigation}) => {
                     showsHorizontalScrollIndicator={false}
                     style={{height:400}}
                 >
-                    
-                    
                     <CardSmall 
                         navigation={ navigation }
                         card={{
@@ -117,41 +110,28 @@ const Home = ({navigation}) => {
                     />
                 </ScrollView>   
                 </View>
-        
-                         
+    
+                <View style={{
+                    flexDirection:"row",
+                    paddingHorizontal:20,
+                    width:"100%",
+                    alignItems:"center",
+                    marginTop:-80,
+                }}>
+                    <HeadingSection 
+                        heading={{
+                            headingTitle:'Featured Gear'
+                        }}/>
+                    <View style={{width:"50%", alignItems:"flex-end"}}>
+                        <ButtonSmall 
+                            navigation={navigation}
+                            button={{
+                                buttonName:'More',
+                                buttonNav:'Detail'
+                            }}/>
+                    </View>
+                </View>
 
-                
-
-
-               <View style={{
-                   flexDirection:"row",
-                   paddingHorizontal:20,
-                   width:"100%",
-                   alignItems:"center",
-                   marginTop:-80,
-               }}>
-                   <View style={{width:"50%"}}>
-                        <Text style={{
-                            fontWeight:"bold",
-                            fontSize:17,
-                            color:"#585a61",
-                            paddingBottom:5
-                        }}>Featured Gear</Text>
-                        <View style={{
-                            height:4,
-                            backgroundColor:theme.colors.tertiary,
-                            width:115,
-                            marginTop:-5
-                        }}>
-
-                        </View>
-
-                   </View>
-                   
-                   <View style={{width:"50%", alignItems:"flex-end"}}>
-                        <ButtonSmall navigation={navigation}/>
-                   </View>
-               </View>
                 <ScrollView
                     horizontal
                     showsHorizontalScrollIndicator={false}
@@ -161,15 +141,13 @@ const Home = ({navigation}) => {
                         source={require("../images/18.png")}
                         style={{marginTop:20,marginHorizontal:20}}
                     />
-                     <Image
+                    <Image
                         source={require("../images/19.png")}
                         style={{marginTop:20,borderRadius:10}}
                     />
                 </ScrollView>
-           </ScrollView>
+            </ScrollView>
 
-
-               
         </View>
     )
 }
