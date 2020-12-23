@@ -1,64 +1,83 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
+import * as Icon from "@expo/vector-icons";
 import Home from '../screens/Home'
 import Detail from '../screens/Detail'
 import Favourite from '../screens/Favourite'
 import Profile from '../screens/Profile'
 import Equipment from '../screens/Equipment'
+import Marketplace from '../screens/Marketplace'
+import Challenge from '../screens/Challenge'
 import {Image} from 'react-native'
+import { theme } from '../constants';
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
     return(
         <Tab.Navigator
+        initialRouteName='Home'
             tabBarOptions={{
                 style:{
                     height:65,
                     justifyContent:"center",
                     paddingVertical:15,
-                    backgroundColor:"#eff4f0",
+                    backgroundColor:theme.colors.primary,
                     elevation:2
                 }
+                
             }}
         >
-            <Tab.Screen
-                name="Home"
-                component={Home}
-                options={{
-                    tabBarLabel:"",
-                    tabBarIcon:({color, size}) => (
-                        <Image
-                            source={require("../images/8.png")}
-                            style={{ height:20, width:20 }}
-                        />
-                    )
-                }}
-            />
-            <Tab.Screen
-                name="Favourite"
-                component={Favourite}
-                options={{
-                    tabBarLabel:"",
-                    tabBarIcon:({color, size}) => (
-                        <Image
-                            source={require("../images/9.png")}
-                            style={{ height:20, width:20 }}
-                        />
-                    )
-                }}
-            />
             <Tab.Screen
                 name="Profile"
                 component={Profile}
                 options={{
                     tabBarLabel:"",
-                    tabBarIcon:({color, size}) => (
-                        <Image
-                            source={require("../images/10.png")}
-                            style={{ height:20, width:20 }}
-                        />
-                    )
+                    tabBarIcon:({ focused, size}) => {{
+                        let color;
+                        focused===true?color=theme.colors.accent:color=theme.colors.white;
+                            return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'human-greeting'} size={size} color={theme.colors.white} />;
+                        }
+                    }
+                }}
+            />
+            <Tab.Screen
+                name="Marketplace"
+                component={Marketplace}
+                options={{
+                    tabBarLabel:"",
+                    tabBarIcon:({ focused, size}) => {{
+                        let color;
+                        focused===true?color=theme.colors.accent:color=theme.colors.white;
+                            return <Icon.MaterialCommunityIcons style={{ height:24, width:29 }} name={'hook'} size={size} color={color} />;
+                        }
+                    }
+                }}
+            />
+            <Tab.Screen
+                name="Home"
+                component={Home}
+                options={{
+                    tabBarLabel:"",
+                    tabBarIcon:({ focused, size}) => {{
+                        let color;
+                        focused===true?color=theme.colors.accent:color=theme.colors.white;
+                            return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'home'} size={size} color={color} />;
+                        }
+                    }
+                }}
+            />
+            <Tab.Screen
+                name="Challenge"
+                component={Challenge}
+                options={{
+                    tabBarLabel:"",
+                    tabBarIcon:({ focused, color, size}) => {{
+                        let color;
+                        focused===true?color=theme.colors.accent:color=theme.colors.white;
+                            return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'star-face'} size={size} color={color} />;
+                        }
+                    }
                 }}
             />
             <Tab.Screen
@@ -66,12 +85,12 @@ const BottomTabNavigator = () => {
                 component={Equipment}
                 options={{
                     tabBarLabel:"",
-                    tabBarIcon:({color, size}) => (
-                        <Image
-                            source={require("../images/10.png")}
-                            style={{ height:20, width:20 }}
-                        />
-                    )
+                    tabBarIcon:({ focused, size}) => {{
+                        let color;
+                        focused===true?color=theme.colors.accent:color=theme.colors.white;
+                            return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'weather-sunset'} size={size} color={color} />;
+                        }
+                    }
                 }}
             />
         </Tab.Navigator>

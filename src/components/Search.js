@@ -37,7 +37,7 @@ const Search = ({navigation, search}) => {
                         }}
                    />
                    <Image
-                    source={require('../images/3.png')}
+                    source={require('../images/search.png')}
                     style={{
                         height:20,
                         width:20,

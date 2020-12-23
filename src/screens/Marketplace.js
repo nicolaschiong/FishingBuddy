@@ -2,16 +2,16 @@ import React from 'react'
 import {View, Text, Button} from 'react-native'
 
 
-const Equipment = ({navigation}) => {
+const Marketplace = ({navigation}) => {
     return (
         <View style={{
             justifyContent:"center",
             alignContent:"center",
             flex:1
         }}>
-            <Text>Trip</Text>
+            <Text>Marketplace</Text>
             <Button title={"Go"} onPress={()=>navigation.navigate("Detail")}></Button>
         </View>
     )
 }
-export default Equipment;
+export default Marketplace;

@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image, ImageBackground, StyleSheet } from 'react-native';
 import { TextInput, ScrollView,TouchableOpacity } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
+
 import { theme } from "../constants";
 
 import CardSmall from '../components/CardSmall';
@@ -15,21 +16,21 @@ const Home = ({navigation}) => {
             backgroundColor: theme.colors.white,
             flex:1
         }}>
-           <Header />
-           <Search />
-           
-           <ScrollView 
+            <Header />
+            <Search />
+
+            <ScrollView 
                 style={{paddingTop:-20}}
             >
-           <View style={{
-                   flexDirection:"row",
-                   paddingHorizontal:20,
-                   width:"100%",
-                   alignItems:"center",
-                   
-               }}>
-                   <View style={{width:"50%"}}>
-                        <Text style={{
+            <View style={{
+                flexDirection:"row",
+                paddingHorizontal:20,
+                width:"100%",
+                alignItems:"center",
+                
+            }}>
+                <View style={{width:"50%"}}>
+                    <Text style={{
                             fontWeight:"bold",
                             fontSize:17,
                             color:"#585a61",
