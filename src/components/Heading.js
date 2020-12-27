@@ -4,14 +4,14 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 
 import { theme } from "../constants";
 
-import ButtonSmall from "../components/ButtonSmall";
+import ButtonSmall from "./ButtonSmall";
 
 
-const HeadingSection = ({heading}) => {
+const Heading = ({heading}) => {
     return (
         <View style={{width:"50%"}}>
             <Text style={{
-                fontWeight:"bold",
+                fontFamily:"Bold",
                 fontSize:17,
                 color:"#585a61",
                 paddingBottom:5
@@ -28,4 +28,4 @@ const HeadingSection = ({heading}) => {
         </View>
     )
 }
-export default HeadingSection;
+export default Heading;

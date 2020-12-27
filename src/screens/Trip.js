@@ -4,6 +4,10 @@ import {View, Text, Button} from 'react-native'
 import { theme } from '../constants/'
 
 import Map from '../components/Map'
+import Heading from '../components/Heading';
+import Card from '../components/Card';
+
+
 
 
 const Trip = ({navigation}) => {
@@ -14,8 +18,34 @@ const Trip = ({navigation}) => {
             flex:1
         }}>
             <Map/>
-            <Text>Trip</Text>
-            <Button title={"Go"} onPress={()=>navigation.navigate("Detail")}></Button>
+            <View style={{
+                flexDirection:"row",
+                paddingTop:20,
+                paddingHorizontal:20,
+                width:"100%",
+                alignItems:"center",
+                
+            }}>
+                
+                <Heading 
+                    heading={{
+                        headingTitle:'Weather'
+                    }}/>
+                
+                
+            </View>  
+            <View>
+                <Card 
+                    navigation={ navigation }
+                    card={{
+                        productName:"Test",
+                        productPrice:"100",
+                        productImage:"5.png",
+                        productCategory:"LURE"
+                    }}
+                    type='large'
+                />
+            </View>
         </View>
     )
 }

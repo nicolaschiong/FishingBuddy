@@ -1,15 +1,15 @@
 import React from 'react';
 import { View, Text, Image, ImageBackground, StyleSheet } from 'react-native';
-import { TextInput, ScrollView,TouchableOpacity } from 'react-native-gesture-handler';
+import { TextInput, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { theme } from "../constants";
 
-import CardSmall from '../components/CardSmall';
+import Card from '../components/Card';
 import ButtonSmall from '../components/ButtonSmall';
 import Header from '../components/Header';
 import Search from '../components/Search';
-import HeadingSection from '../components/HeadingSection';
+import Heading from '../components/Heading';
 
 const Home = ({navigation}) => {
     return(
@@ -17,7 +17,7 @@ const Home = ({navigation}) => {
             backgroundColor: theme.colors.white,
             flex:1
         }}>
-            <Header />
+            <Header navigation={navigation} type='home'/>
             <Search />
 
             <ScrollView
@@ -38,7 +38,7 @@ const Home = ({navigation}) => {
                     
                 }}>
                     
-                    <HeadingSection 
+                    <Heading 
                         heading={{
                             headingTitle:'Recommended'
                         }}/>
@@ -65,58 +65,53 @@ const Home = ({navigation}) => {
                                 }}
                             />
                         <ScrollView 
-                        horizontal
-                        showsHorizontalScrollIndicator={false}
-                        style={{height:400}}
-                    >
-                        <CardSmall 
-                            navigation={ navigation }
-                            card={{
-                                productName:"Test",
-                                productPrice:"100",
-                                productImage:"5.png",
-                                productCategory:"LURE"
-                            }}
-                        />
-                        <CardSmall 
-                            navigation={ navigation }
-                            card={{
-                                productName:"Test",
-                                productPrice:"100",
-                                productImage:"4.png",
-                                productCategory:"REEL"
-                            }}
-                        />
-                        <CardSmall 
-                            navigation={ navigation }
-                            card={{
-                                productName:"Test",
-                                productPrice:"100",
-                                productImage:"6.png",
-                                productCategory:"REEL"
-                            }}
-                        />
-                        <CardSmall 
-                            navigation={ navigation }
-                            card={{
-                                productName:"Test",
-                                productPrice:"100",
-                                productImage:"7.png",
-                                productCategory:"REEL"
-                            }}
-                        />
-                        <CardSmall 
-                            navigation={ navigation }
-                            card={{
-                                productName:"Test",
-                                productPrice:"100",
-                                productImage:"4.png",
-                                productCategory:"REEL"
-                            }}
-                        />
-                    </ScrollView>   
+                            horizontal
+                            showsHorizontalScrollIndicator={false}
+                            style={{height:400}}
+                        >
+                            <Card 
+                                navigation={ navigation }
+                                card={{
+                                    productName:"Test",
+                                    productPrice:"100",
+                                    productImage:"5.png",
+                                    productCategory:"LURE"
+                                }}
+                                type='small'
+                            />
+                            <Card 
+                                navigation={ navigation }
+                                card={{
+                                    productName:"Test",
+                                    productPrice:"100",
+                                    productImage:"4.png",
+                                    productCategory:"REEL"
+                                }}
+                                type='small'
+                            />
+                            <Card 
+                                navigation={ navigation }
+                                card={{
+                                    productName:"Test",
+                                    productPrice:"100",
+                                    productImage:"6.png",
+                                    productCategory:"REEL"
+                                }}
+                                type='small'
+                            />
+                            <Card 
+                                navigation={ navigation }
+                                card={{
+                                    productName:"Test",
+                                    productPrice:"100",
+                                    productImage:"7.png",
+                                    productCategory:"REEL"
+                                }}
+                                type='small'
+                            />
+                        </ScrollView>   
                     </View>
-        
+
                     <View style={{
                         flexDirection:"row",
                         paddingHorizontal:20,
@@ -124,7 +119,7 @@ const Home = ({navigation}) => {
                         alignItems:"center",
                         marginTop:-80,
                     }}>
-                        <HeadingSection 
+                        <Heading 
                             heading={{
                                 headingTitle:'Featured Gear'
                             }}/>

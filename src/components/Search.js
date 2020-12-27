@@ -16,7 +16,7 @@ const Search = ({navigation, search}) => {
                 height:90,
                 marginTop:-45
             }}
-           >
+            >
             <View style={{
                 backgroundColor: theme.colors.white,
                 paddingVertical:8,
@@ -44,8 +44,7 @@ const Search = ({navigation, search}) => {
                         position:'absolute',
                         right:0,
                         marginRight:15
-                    }
-                }
+                    }}
                 />
             </View>
         </LinearGradient>
