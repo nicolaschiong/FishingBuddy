@@ -1,10 +1,9 @@
 import React from 'react';
-import {Text,View,ImageBackground,Image,TouchableOpacity} from 'react-native';
+import { Text, View, ImageBackground, Image, TouchableOpacity, ScrollView} from 'react-native';
 import Icon from "@expo/vector-icons/Entypo"
 
 import { theme } from "../constants";
-
-import Header from '../components/Header';
+import { Header } from '../components/common';
 
 export default class Profile extends React.Component{
     state={
@@ -21,6 +20,8 @@ export default class Profile extends React.Component{
                 height:"100%",
             }}>
                 <Header navigation={this.props.navigation} type='profile'/>
+
+                <ScrollView>
 
                 <View style={{
                     flexDirection:"row",
@@ -132,6 +133,7 @@ export default class Profile extends React.Component{
 
                     </View>
                 </View>
+                </ScrollView>
             </View>
         )
     }

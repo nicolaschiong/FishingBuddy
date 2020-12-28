@@ -2,9 +2,9 @@ import React from 'react'
 import { View, Text, Image, ImageBackground } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
-import { theme } from "../constants";
+import { theme } from "../../constants";
 
-import ButtonSmall from "./ButtonSmall";
+import Button from "./Button";
 
 
 const Heading = ({heading}) => {
@@ -12,8 +12,8 @@ const Heading = ({heading}) => {
         <View style={{width:"50%"}}>
             <Text style={{
                 fontFamily:"Bold",
-                fontSize:17,
-                color:"#585a61",
+                fontSize:theme.sizes.header,
+                color:theme.colors.gray3,
                 paddingBottom:5
             }}>
                 {heading.headingTitle}
@@ -28,4 +28,4 @@ const Heading = ({heading}) => {
         </View>
     )
 }
-export default Heading;
+export { Heading };

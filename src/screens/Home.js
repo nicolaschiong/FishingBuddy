@@ -4,12 +4,7 @@ import { TextInput, ScrollView, TouchableOpacity } from 'react-native-gesture-ha
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { theme } from "../constants";
-
-import Card from '../components/Card';
-import ButtonSmall from '../components/ButtonSmall';
-import Header from '../components/Header';
-import Search from '../components/Search';
-import Heading from '../components/Heading';
+import { Card, Button, Header, Heading, Search } from '../components/common';
 
 const Home = ({navigation}) => {
     return(
@@ -43,7 +38,7 @@ const Home = ({navigation}) => {
                             headingTitle:'Recommended'
                         }}/>
                     <View style={{width:"50%", alignItems:"flex-end"}}>
-                        <ButtonSmall navigation={navigation}
+                        <Button navigation={navigation}
                             button={{ 
                                 buttonName:'Discover',
                                 buttonNav:'Detail'
@@ -124,7 +119,7 @@ const Home = ({navigation}) => {
                                 headingTitle:'Featured Gear'
                             }}/>
                         <View style={{width:"50%", alignItems:"flex-end"}}>
-                            <ButtonSmall 
+                            <Button 
                                 navigation={navigation}
                                 button={{
                                     buttonName:'More',

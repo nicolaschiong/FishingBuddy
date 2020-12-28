@@ -3,8 +3,7 @@ import { View, Text, Image, ImageBackground, Dimensions } from 'react-native';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
 
-
-import { theme } from "../constants";
+import { theme } from "../../constants";
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -24,9 +23,9 @@ const Card = ({navigation, card, type}) => {
                     marginBottom:10,
                     width:160
                 }}
-            >
+            > 
                 <Image
-                    source={require('../images/4.png')}
+                    source={require('../../images/4.png')}
                 />
                 <View 
                     style={{
@@ -130,4 +129,4 @@ const Card = ({navigation, card, type}) => {
         )
     }
 }
-export default Card;
+export { Card };

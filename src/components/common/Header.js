@@ -3,7 +3,7 @@ import { View, Text, Image, ImageBackground, Platform } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import Icon from "@expo/vector-icons/Entypo"
 
-import { theme } from "../constants";
+import { theme } from "../../constants";
 
 
 const Header = ({navigation, header, type}) => {
@@ -18,7 +18,7 @@ const Header = ({navigation, header, type}) => {
             }}>
                 <TouchableOpacity>
                     <Image
-                        source={require('../images/1.png')}
+                        source={require('../../images/1.png')}
                         style={{
                             height:10,
                             width:20,
@@ -44,7 +44,7 @@ const Header = ({navigation, header, type}) => {
                         <TouchableOpacity
                             onPress={()=>navigation.navigate('Profile')}>
                             <Image
-                                source={require('../images/g.png')}
+                                source={require('../../images/g.png')}
                                 style={{height:60,width:60}}
                             />
                         </TouchableOpacity>
@@ -60,8 +60,8 @@ const Header = ({navigation, header, type}) => {
                 paddingHorizontal:40,
                 backgroundColor: theme.colors.primary,
                 height: Platform.OS === 'ios' ? '40%' : '45%',
-                borderBottomLeftRadius:50,
-                borderBottomRightRadius:50
+                borderBottomLeftRadius:20,
+                borderBottomRightRadius:20
             }}>
                 <View style={{
                     flexDirection:"row",
@@ -96,7 +96,7 @@ const Header = ({navigation, header, type}) => {
                 </View>
 
                 <Image
-                    source={require('../images/g.png')}
+                    source={require('../../images/g.png')}
                     style={{
                         height:100,
                         width:100,
@@ -141,7 +141,7 @@ const Header = ({navigation, header, type}) => {
                                 color:theme.colors.white,
                                 alignSelf:"center"
                             }}>
-                                photos
+                                caught
                             </Text>
                     </View>
 
@@ -184,4 +184,4 @@ const Header = ({navigation, header, type}) => {
         )
     }
 }
-export default Header;
+export { Header };

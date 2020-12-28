@@ -2,10 +2,7 @@ import React from 'react'
 import {View, Text, Button} from 'react-native'
 
 import { theme } from '../constants/'
-
-import Map from '../components/Map'
-import Heading from '../components/Heading';
-import Card from '../components/Card';
+import { Card, Heading, Map } from '../components/common';
 
 
 

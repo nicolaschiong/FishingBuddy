@@ -3,7 +3,7 @@ import { View, Text, Image, ImageBackground } from 'react-native';
 import { TextInput, ScrollView,TouchableOpacity } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import { theme } from "../constants";
+import { theme } from "../../constants";
 
 
 const Search = ({navigation, search}) => {
@@ -37,7 +37,7 @@ const Search = ({navigation, search}) => {
                     }}
                 />
                 <Image
-                    source={require('../images/search.png')}
+                    source={require('../../images/search.png')}
                     style={{
                         height:20,
                         width:20,
@@ -50,4 +50,4 @@ const Search = ({navigation, search}) => {
         </LinearGradient>
     )
 }
-export default Search;
+export { Search };

@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Maps
 
 
-import { theme } from "../constants";
+import { theme } from "../../constants";
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -15,8 +15,8 @@ const Map = ({navigation, map}) => {
             <MapView
                 style={{ left:0, right: 0, top:0, bottom: 0, position: 'absolute' }}
                 initialRegion={{
-                    latitude: 37.78825,
-                    longitude: -122.4324,
+                    latitude: 10.208790,
+                    longitude: 123.761127,
                     latitudeDelta: 0.0922,
                     longitudeDelta: 0.0421,
                 }}
@@ -24,4 +24,4 @@ const Map = ({navigation, map}) => {
         </View>
     )
 }
-export default Map;
+export { Map };
