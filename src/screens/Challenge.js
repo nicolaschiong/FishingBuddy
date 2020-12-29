@@ -14,4 +14,4 @@ const Challenge = ({navigation}) => {
         </View>
     )
 }
-export default Challenge;
+export { Challenge };

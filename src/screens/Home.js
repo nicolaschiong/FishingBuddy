@@ -148,4 +148,4 @@ const Home = ({navigation}) => {
     )
 }
 
-export default Home;
+export { Home };

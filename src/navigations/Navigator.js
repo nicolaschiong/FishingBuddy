@@ -1,32 +1,27 @@
-import React from 'react'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { createStackNavigator } from '@react-navigation/stack'
+import React from 'react';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Image } from 'react-native';
 import * as Icon from "@expo/vector-icons";
-import Home from '../screens/Home'
-import Detail from '../screens/Detail'
-import Favourite from '../screens/Favourite'
-import Profile from '../screens/Profile'
-import Trip from '../screens/Trip'
-import Marketplace from '../screens/Marketplace'
-import Challenge from '../screens/Challenge'
-import {Image} from 'react-native'
+
+import { Challenge, Detail, Equipment, Favourite, Home, Login, Marketplace, Profile, Register, Trip } from '../screens/';
 import { theme } from '../constants';
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 const BottomTabNavigator = () => {
     return(
         <Tab.Navigator
-        initialRouteName='Home'
-            tabBarOptions={{
-                style:{
-                    height:65,
-                    justifyContent:"center",
-                    paddingVertical:15,
-                    backgroundColor:theme.colors.primary,
-                    elevation:2
-                }
-                
-            }}
+            shifting={false}
+            initialRouteName='Home'
+                tabBarOptions={{
+                    style:{
+                        height:50,
+                        justifyContent:"center",
+                        paddingVertical:15,
+                        backgroundColor:theme.colors.primary,
+                        elevation:2,
+                    }
+                }}
         >
             <Tab.Screen
                 name="Profile"
@@ -36,7 +31,7 @@ const BottomTabNavigator = () => {
                     tabBarIcon:({ focused, size}) => {{
                         let color;
                         focused===true?color=theme.colors.secondary:color=theme.colors.white;
-                            return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'human-greeting'} size={size} color={color} />;
+                            return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'human-greeting'} size={24} color={color} />;
                         }
                     }
                 }}
@@ -49,7 +44,7 @@ const BottomTabNavigator = () => {
                     tabBarIcon:({ focused, size}) => {{
                         let color;
                         focused===true?color=theme.colors.secondary:color=theme.colors.white;
-                            return <Icon.MaterialCommunityIcons style={{ height:24, width:29 }} name={'hook'} size={size} color={color} />;
+                            return <Icon.MaterialIcons style={{ height:24, width:29 }} name={'store-mall-directory'} size={24} color={color} />;
                         }
                     }
                 }}
@@ -62,7 +57,7 @@ const BottomTabNavigator = () => {
                     tabBarIcon:({ focused, size}) => {{
                         let color;
                         focused===true?color=theme.colors.secondary:color=theme.colors.white;
-                            return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'home'} size={size} color={color} />;
+                            return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'home'} size={24} color={color} />;
                         }
                     }
                 }}
@@ -75,7 +70,7 @@ const BottomTabNavigator = () => {
                     tabBarIcon:({ focused, color, size}) => {{
                         let color;
                         focused===true?color=theme.colors.secondary:color=theme.colors.white;
-                            return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'star-face'} size={size} color={color} />;
+                            return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'fish'} size={24} color={color} />;
                         }
                     }
                 }}
@@ -88,7 +83,7 @@ const BottomTabNavigator = () => {
                     tabBarIcon:({ focused, size}) => {{
                         let color;
                         focused===true?color=theme.colors.secondary:color=theme.colors.white;
-                            return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'weather-sunset'} size={size} color={color} />;
+                            return <Icon.MaterialCommunityIcons style={{ height:24, width:24 }} name={'weather-sunset'} size={24} color={color} />;
                         }
                     }
                 }}
@@ -108,6 +103,8 @@ const HomeStackNavigator = () => {
         <Stack.Navigator screenOptions={screenOptionStyle}>
             <Stack.Screen name="Home" component={BottomTabNavigator}/>
             <Stack.Screen name="Detail" component={Detail}/>
+            <Stack.Screen name="Login" component={Login}/>
+            <Stack.Screen name="Register" component={Register}/>
         </Stack.Navigator>
     )
 }

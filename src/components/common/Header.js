@@ -1,17 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { View, Text, Image, ImageBackground, Platform } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler'
-import Icon from "@expo/vector-icons/Entypo"
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import Icon from "@expo/vector-icons/Entypo";
+import moment from 'moment';
 
 import { theme } from "../../constants";
 
+const Header = ({navigation, header, type}) => {    
+    const [greeting, setGreeting] = useState('');
 
-const Header = ({navigation, header, type}) => {
+    useEffect(() => {
+        setInterval(()=>{
+            var hour = new Date().getHours(); //Current Hours
+            //localize greeting
+            if(hour<12){
+                setGreeting('Buntag');
+            } if(hour<18) {
+                setGreeting('Hapon');
+            } if(hour<24) {
+                setGreeting('Gabii');
+            }
+        },1000);
+        
+    }, []);
+
+
     if(type==='home') {
         return (
             <View style={{
                 backgroundColor: theme.colors.primary,
-                height: Platform.OS === 'ios' ? '23%' : '25%',
+                height: Platform.OS === 'ios' ? '22%' : '23%',
                 borderBottomLeftRadius:20,
                 borderBottomRightRadius:20,
                 paddingHorizontal:20
@@ -35,10 +53,15 @@ const Header = ({navigation, header, type}) => {
                 }}>
                     <View style={{width:"50%"}}>
                         <Text style={{
-                            fontSize:28,
+                            fontSize:theme.sizes.title,
                             color: theme.colors.white,
                             fontFamily:"Bold",
-                        }}>Hi, Nick!</Text>
+                        }}>Maayong {greeting} </Text>
+                        <Text style={{
+                            fontSize:theme.sizes.h1,
+                            color: theme.colors.white,
+                            fontFamily:"Bold",
+                        }}>Nick!</Text>
                     </View>
                     <View style={{width:"50%",alignItems:"flex-end"}}>
                         <TouchableOpacity
@@ -59,7 +82,7 @@ const Header = ({navigation, header, type}) => {
             <View style={{
                 paddingHorizontal:40,
                 backgroundColor: theme.colors.primary,
-                height: Platform.OS === 'ios' ? '40%' : '45%',
+                height: Platform.OS === 'ios' ? '38%' : '40%',
                 borderBottomLeftRadius:20,
                 borderBottomRightRadius:20
             }}>
@@ -87,11 +110,13 @@ const Header = ({navigation, header, type}) => {
                         position:'absolute',
                         right:0,
                     }}>
-                        <Icon
-                            name="dots-two-vertical"
-                            size={24}
-                            color={theme.colors.white}
-                        />
+                        <TouchableOpacity>
+                            <Icon
+                                name="pencil"
+                                size={24}
+                                color={theme.colors.white}
+                            />  
+                        </TouchableOpacity>
                     </View>
                 </View>
 
@@ -106,7 +131,7 @@ const Header = ({navigation, header, type}) => {
                     }}
                 />
                 <Text style={{
-                    fontSize:22,
+                    fontSize:theme.sizes.title,
                     fontFamily:"Bold",
                     color:theme.colors.white,
                     alignSelf:"center"
@@ -115,7 +140,7 @@ const Header = ({navigation, header, type}) => {
                 </Text>
                 <Text style={{
                     fontFamily:"Medium",
-                    fontSize:16,
+                    fontSize:theme.sizes.body,
                     color:theme.colors.white,
                     alignSelf:"center"
                 }}>
@@ -131,34 +156,34 @@ const Header = ({navigation, header, type}) => {
                     <View>
                             <Text style={{
                                 fontFamily:"Bold",
-                                fontSize:15,
+                                fontSize:theme.sizes.body,
                                 color:theme.colors.white,
                                 alignSelf:"center"
                             }}>280</Text>
                             <Text style={{
                                 fontFamily:"Medium",
-                                fontSize:16,
+                                fontSize:theme.sizes.caption,
                                 color:theme.colors.white,
                                 alignSelf:"center"
                             }}>
-                                caught
+                                fish caught
                             </Text>
                     </View>
 
                     <View style={{marginHorizontal:40}}>
                             <Text style={{
                                 fontFamily:"Bold",
-                                fontSize:15,
+                                fontSize:theme.sizes.body,
                                 color:theme.colors.white,
                                 alignSelf:"center"
                             }}>2,107</Text>
                             <Text style={{
                                 fontFamily:"Medium",
-                                fontSize:16,
+                                fontSize:theme.sizes.caption,
                                 color:theme.colors.white,
                                 alignSelf:"center"
                             }}>
-                                followers
+                                photos
                             </Text>
                     </View>
 
@@ -166,13 +191,13 @@ const Header = ({navigation, header, type}) => {
                     <View>
                             <Text style={{
                                 fontFamily:"Bold",
-                                fontSize:15,
+                                fontSize:theme.sizes.body,
                                 color:theme.colors.white,
                                 alignSelf:"center"
                             }}>104</Text>
                             <Text style={{
                                 fontFamily:"Medium",
-                                fontSize:16,
+                                fontSize:theme.sizes.caption,
                                 color:theme.colors.white,
                                 alignSelf:"center"
                             }}>

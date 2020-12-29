@@ -14,4 +14,4 @@ const Marketplace = ({navigation}) => {
         </View>
     )
 }
-export default Marketplace;
+export { Marketplace };

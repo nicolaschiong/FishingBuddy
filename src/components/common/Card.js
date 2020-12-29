@@ -12,7 +12,7 @@ const Card = ({navigation, card, type}) => {
     if(type==='small'){
         return (
             <TouchableOpacity 
-                onPress={()=>navigation.navigate("Detail")}
+                onPress={()=>navigation.navigate("Login")}
                 style={{
                     height:250,
                     elevation:2,

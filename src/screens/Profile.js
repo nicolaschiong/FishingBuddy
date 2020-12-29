@@ -5,7 +5,7 @@ import Icon from "@expo/vector-icons/Entypo"
 import { theme } from "../constants";
 import { Header } from '../components/common';
 
-export default class Profile extends React.Component{
+class Profile extends React.Component{
     state={
         collectionSelected:true
     }
@@ -31,15 +31,15 @@ export default class Profile extends React.Component{
                     <TouchableOpacity
                         onPress={this.onTabPressed}
                         style={{
-                            borderBottomColor: this.state.collectionSelected ? theme.colors.primary:"#044244",
+                            borderBottomColor: this.state.collectionSelected ? theme.colors.primary : theme.colors.gray,
                             borderBottomWidth:4,
                             paddingVertical:6,
                         }}
                     >
                         <Text style={{
                             fontFamily:"Bold",
-                            color:this.state.collectionSelected ? theme.colors.primary:"#9ca1a2"
-                        }}>COLLECTIONS</Text>
+                            color:this.state.collectionSelected ? theme.colors.primary : theme.colors.gray
+                        }}>MY GEAR</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
@@ -138,3 +138,5 @@ export default class Profile extends React.Component{
         )
     }
 }
+
+export { Profile };

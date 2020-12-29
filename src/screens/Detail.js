@@ -156,4 +156,4 @@ const Detail = ({navigation}) => {
         </View>
     )
 }
-export default Detail;
+export { Detail };

@@ -12,4 +12,4 @@ const Favourite = () => {
         </View>
     )
 }
-export default Favourite;
+export { Favourite };

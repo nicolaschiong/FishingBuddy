@@ -46,4 +46,4 @@ const Trip = ({navigation}) => {
         </View>
     )
 }
-export default Trip;
+export { Trip };

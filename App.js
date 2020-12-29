@@ -32,7 +32,7 @@ export default class App extends React.Component{
   render(){
     return (
       (this.state.isFontLoaded === true)
-        ? (<NavigationContainer><HomeStackNavigator/></NavigationContainer>) 
+        ? (<NavigationContainer><HomeStackNavigator/></NavigationContainer>)
         : (<AppLoading/>)
     );
   }

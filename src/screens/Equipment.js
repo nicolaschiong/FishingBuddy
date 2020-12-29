@@ -14,4 +14,4 @@ const Equipment = ({navigation}) => {
         </View>
     )
 }
-export default Equipment;
+export { Equipment };
